@@ -4,6 +4,8 @@ Find your birth date and your name in the digits of Pi. A web app that searches 
 
 **Live demo:** [https://hromp.com/pi/](https://hromp.com/pi/)
 
+Inspired by [Am I in Pi?](https://www.facade.com/legacy/amiinpi/?thenum=72091) on facade.com.
+
 ## Features
 
 - **Birthday search**: Month/day/year picker; searches MMDDYYYY, MDDYYYY, MMDDYY, MDDYY
@@ -70,4 +72,4 @@ The digits are from [Eve Andersson’s collection](http://www.eveandersson.com/p
 
 ## License
 
-MIT
+GPL-3.0. See [LICENSE](LICENSE) for details.
