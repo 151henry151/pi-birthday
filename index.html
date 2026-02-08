@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birthday in π — Find your date in Pi | hromp.com</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a href="https://hromp.com" class="home-link">← hromp.com</a>
+      <h1 class="title">Birthday in π</h1>
+      <p class="tagline">Find your birth date — and your name — in the digits of Pi</p>
+    </header>
+
+    <main class="main">
+      <section class="search-section card">
+        <h2>Search by birthday</h2>
+        <p class="hint">Select your date of birth. We'll search for it in the first 1 million digits of π.</p>
+        <form id="birthday-form" class="date-form" autocomplete="on">
+          <div class="date-inputs">
+            <div class="date-field">
+              <label for="month">Month</label>
+              <select id="month" required>
+                <option value="">—</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+            <div class="date-field">
+              <label for="day">Day</label>
+              <input type="number" id="day" min="1" max="31" placeholder="DD" autocomplete="bday-day">
+            </div>
+            <div class="date-field">
+              <label for="year">Year</label>
+              <input type="number" id="year" min="1" max="9999" placeholder="YYYY" autocomplete="bday-year">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="search-birthday-btn">Find my birthday in π</button>
+        </form>
+      </section>
+
+      <section class="search-section card">
+        <h2>Search by name</h2>
+        <p class="hint">A=1, B=2, C=3 … Z=26. Enter your name to find it as digits in π.</p>
+        <form id="name-form" class="name-form">
+          <div class="name-input-wrap">
+            <input type="text" id="name-input" placeholder="Enter your name" maxlength="20" autocomplete="off">
+            <button type="submit" class="btn btn-primary">Find my name in π</button>
+          </div>
+        </form>
+      </section>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Loading digits of π…</p>
+      </div>
+
+      <div id="result" class="result-section hidden"></div>
+
+      <section class="trivia-section">
+        <h2>About π (Pi)</h2>
+        
+        <div class="trivia-card">
+          <h3>Simple explanation (for everyone)</h3>
+          <p>π (pi) is the number you get when you divide the distance around any circle by the distance across it. If you measure around a pizza and across it, the ratio is always about 3.14 — that's π! It works for every circle, big or small.</p>
+        </div>
+
+        <div class="trivia-card">
+          <h3>What kind of number is π?</h3>
+          <p>π is <strong>irrational</strong>: its decimal digits never end and never repeat. You cannot write it as a simple fraction. It's also <strong>transcendental</strong>, meaning it's not the solution to any ordinary polynomial equation with whole-number coefficients. Unlike numbers like ½ (0.5) or ⅓ (0.333…), π goes on forever with no pattern.</p>
+        </div>
+
+        <div class="trivia-card">
+          <h3>How many digits have been computed?</h3>
+          <p>As of 2024, over <strong>100 trillion</strong> decimal digits of π have been calculated (by 2022, Emma Haruka Iwao computed 100 trillion digits using Google Cloud). This app uses the first <strong>1 million</strong> digits. Mathematicians have proven π's digits continue infinitely with no repeating pattern.</p>
+        </div>
+
+        <div class="trivia-card">
+          <h3>π in a circle</h3>
+          <p>For any circle: <strong>C = π × d</strong> (circumference = π times diameter) and <strong>A = π × r²</strong> (area = π times radius squared). π appears in waves, physics, probability, and many areas of science and engineering.</p>
+        </div>
+
+        <div class="trivia-card">
+          <h3>Fun facts</h3>
+          <ul>
+            <li>March 14 (3/14) is Pi Day.</li>
+            <li>The sequence 123456 does not appear in the first million digits.</li>
+            <li>Every possible finite sequence of digits is believed to appear somewhere in π (π is thought to be "normal").</li>
+            <li>Ancient Babylonians approximated π as 3.125; Archimedes narrowed it to between 3.1408 and 3.1429.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Digits from <a href="http://www.eveandersson.com/pi/digits/" target="_blank" rel="noopener">Eve Andersson</a>. Inspired by <a href="https://www.facade.com/legacy/amiinpi/" target="_blank" rel="noopener">Am I in Pi?</a></p>
+      <p><a href="https://hromp.com">hromp.com</a></p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
